@@ -1,4 +1,4 @@
-package String_based_socket;
+package Basic_text_send;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
