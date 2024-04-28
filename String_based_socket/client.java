@@ -1,3 +1,5 @@
+package String_based_socket;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -20,14 +22,19 @@ public class client {
                 PrintWriter out = new PrintWriter(sca.getOutputStream(), true);
                 out.println(str);
 
+                BufferedReader in = new BufferedReader(new InputStreamReader(sca.getInputStream()));
+
+
                 if (Objects.equals(str, "exit")) {
+                    in.close();
                     flag = 0;
                     break;
                 }
-                BufferedReader in = new BufferedReader(new InputStreamReader(sca.getInputStream()));
+
                 System.out.println(in.readLine());
             }
 
+            sca.close();
 
         } catch (Exception e) {
             e.printStackTrace();
