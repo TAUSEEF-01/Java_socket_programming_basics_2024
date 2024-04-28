@@ -5,6 +5,7 @@ public class client {
         try {
             System.out.println("Client stated...");
             Socket sc = new Socket("localhost", 9000);
+            System.out.println("Connection established!!! :))");
 
         } catch (Exception e) {
             e.printStackTrace();
